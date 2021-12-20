@@ -1,0 +1,62 @@
+.gallery{
+
+    .heading{
+        @include heading;
+    }
+
+    .box-container{
+
+        @include grid(31rem);
+
+        .box{
+            height: 25rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: $box-shadow;
+
+            &:hover{
+                .content{
+                    display: flex;
+                }
+            }
+
+            img{
+                @include box(100%,100%);
+                object-fit: cover;
+            }
+
+            .content{
+                background: rgba(255,255,255, .8);
+                @include flex(center,center,wrap,0);
+                flex-flow: column;
+                @include abs-position(0, auto, auto, 0);
+                @include box(100%,100%);
+                padding: 2rem;
+                text-align: center;
+                border: $border;
+                display: none;
+
+                h3{
+                    font-size: 2rem;
+                    color: $black;
+                    animation: fadeIn .2s linear backwards;
+                }
+
+                p{
+                    font-size: 1.4rem;
+                    color: $black;
+                    padding: 1rem 0;
+                    line-height: 2;
+                    animation: fadeIn .2s linear backwards .2s;
+                }
+
+                .btn{
+                    @include btn;
+                    animation: fadeIn .2s linear backwards .4s;
+                }
+            }
+        }
+
+    }
+
+}

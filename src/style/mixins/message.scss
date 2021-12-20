@@ -1,0 +1,46 @@
+.message{
+
+    .btn{
+        @include btn;
+    }
+
+    background: url(../img/message-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 2rem;
+
+    form{
+        margin: 2rem auto;
+        background:$white;
+        text-align: center;
+        max-width: 40rem;
+        box-shadow: $box-shadow;
+        padding: 2rem;
+
+        h3{
+            font-size: 3rem;
+            color: $black;
+        }
+
+        .box{
+            width: 100%;
+            padding: 1.5rem;
+            margin: .7rem 0;
+            font-size: 1.6rem;
+            color: $light-color;
+            text-transform: none;
+            border-bottom: $border;
+
+            &:focus{
+                border-color: $red;
+            }
+        }
+
+        textarea{
+            height: 15rem;
+            resize: none;
+        }
+    }
+
+}

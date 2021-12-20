@@ -1,0 +1,91 @@
+.shop{
+
+    background: $light-bg;
+
+    .btn{
+        @include btn;
+    }
+
+    .heading{
+        @include heading;
+    }
+
+    .box-container{
+        @include grid(31rem);
+
+        .box{
+            text-align: center;
+            background: $white;
+            border: $border;
+            box-shadow: $box-shadow;
+
+            &:hover {
+
+                .image{
+
+                    img{
+                        transform: scale(1.1);
+                    }
+
+                    .icons{
+                        transform: translateX(0rem);
+                    }
+                }
+            }
+
+            .image{
+                position: relative;
+                overflow: hidden;
+
+                img{
+                    height: 25rem;
+                }
+
+                .icons{
+                    @include abs-position(1rem, auto, auto, 2rem);
+                    transform: translateX(-10rem);
+
+                    a{
+                        display: block;
+                        @include box(5rem, 5rem);
+                        line-height: 4.5rem;
+                        font-size: 1.7rem;
+                        color: $black;
+                        border: $border;
+                        box-shadow: $box-shadow;
+                        margin-top: 1rem;
+
+                        &:hover{
+                            color: $white;
+                            background: $red;
+                        }
+                    }
+                }
+            }
+
+            .content{
+                padding: 2rem;
+
+                h3{
+                    font-size: 2rem;
+                    color: $black;
+                    padding-bottom: .5rem;
+                    font-weight: normal;
+                }
+
+                .price{
+                    font-size: 2rem;
+                    font-weight: bolder;
+                    color: $red;
+
+                    span{
+                        color: $light-color;
+                        font-size: 1.5rem;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+
+}
